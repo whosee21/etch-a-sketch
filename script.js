@@ -3,6 +3,7 @@ const clear = document.getElementById("clear");
 const newgrid = document.getElementById("newgrid");
 const random = document.getElementById("random");
 const greyscale = document.getElementById("greyscale");
+const gridInfo = document.getElementById("gridInfo");
 
 const GRIDSIZE = 550;
 
@@ -14,7 +15,9 @@ function gridCreate(size, isRandom, isGrey) {
     div.innerHTML = '';
     div.style.width = `${GRIDSIZE}px`;
     div.style.height = `${GRIDSIZE}px`;
-    
+
+    gridInfo.textContent = `Current Grid: ${size} x ${size}`;
+
     for (let i = 0; i < (size * size); i++) {
         const box = document.createElement("div");
         box.style.flex = `0 0 ${100/size}%`;
@@ -47,8 +50,14 @@ function gridCreate(size, isRandom, isGrey) {
 greyscale.addEventListener('click', () => {
     if (isGrey === false) {
         isGrey = true;
+        isRandom = false;
+        greyscale.style.backgroundColor = "#6b6bbe";
+        random.style.backgroundColor = "#cfcfe4";
     } else if (isGrey === true) {
         isGrey = false;
+        isRandom = false;
+        greyscale.style.backgroundColor = "#cfcfe4";
+        random.style.backgroundColor = "#cfcfe4";
     }
     gridCreate(size, isRandom, isGrey);
 });
@@ -56,8 +65,15 @@ greyscale.addEventListener('click', () => {
 random.addEventListener('click', () => {
     if (isRandom === false) {
         isRandom = true;
+        isGrey = false;
+        random.style.backgroundColor = "#6b6bbe";
+        greyscale.style.backgroundColor = "#cfcfe4";
+        
     } else if (isRandom === true) {
         isRandom = false;
+        isGrey = false;
+        greyscale.style.backgroundColor = "#cfcfe4";
+        random.style.backgroundColor = "#cfcfe4";
     }
     gridCreate(size, isRandom, isGrey);
 });
