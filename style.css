@@ -45,6 +45,7 @@ h1 {
 
 #container {
     border: 2px solid #6b6bbe;
+    background-color: #363636;
     display: flex;
     flex-wrap: wrap;
     padding: 24px;
