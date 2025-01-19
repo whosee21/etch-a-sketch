@@ -8,13 +8,15 @@
 
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:rgb(216, 215, 210);
+    color:#d8d7d2;
     background-color: #282b3a;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    justify-content: space-between;
     align-items: center;
+    padding: 0 100px;
+    /* flex-wrap: wrap-reverse; */
 }
 
 h1 {
@@ -24,29 +26,41 @@ h1 {
 
 #sidebar {
     /* border: 2px solid whitesmoke; */
-    width: 250px;
-    height: 500px;
-    align-self: flex-start;
-    margin-left: 100px;
+    /* width: 250px; */
+    width: 15rem;
+    /* height: 500px; */
+    height: 30rem;
+    /* align-self: flex-start; */
+    /* margin-left: 100px; */
+    /* flex-shrink: 1; */
 }
 
 #selectors {
-    border: 2px solid rgb(165, 165, 201);
+    border: 2px solid #a5a5c9;
     border-radius: 20px;
-    width: 100%;
+    /* width: inherit; */
     height: 73%;
     margin-top: 20px;
 }
 
 #container {
-    border: 2px solid rgb(107, 107, 190);
+    border: 2px solid #6b6bbe;
     display: flex;
     flex-wrap: wrap;
     padding: 24px;
+    width: 550px;
+    height: 550px;
     border-radius: 20px;
-    position: fixed;
+    margin: 50px;
+    flex-shrink: 0;
 }
 
 .box {
     border: .5px solid #929292;
+}
+
+#right-space{
+    /* border: 1px solid white; */
+    width: 200px;
+    height: 200px;
 }
