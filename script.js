@@ -102,6 +102,7 @@ clear.addEventListener('click', () => {
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].style.backgroundColor = "white";
     }
+    gridCreate(size,isRandom,isGrey);
 });
 
 gridCreate(size, isRandom, isGrey);
